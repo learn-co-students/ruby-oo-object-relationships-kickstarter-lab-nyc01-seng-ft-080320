@@ -14,4 +14,4 @@ class Project
         backers.map { |proj_backer_instance| proj_backer_instance.backer}
     end 
     
-end 
+end  
