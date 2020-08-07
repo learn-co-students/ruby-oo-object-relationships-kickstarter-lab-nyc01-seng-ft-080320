@@ -10,8 +10,11 @@ class Project
     end 
 
     def backers
-        backers = ProjectBacker.all.filter { |proj_backer_instance|  proj_backer_instance.project == self }
-        backers.map { |proj_backer_instance| proj_backer_instance.backer}
+        ProjectBacker.all.filter do |proj_backer_instance|  
+            proj_backer_instance.project == self 
+        end.map do |proj_backer_instance| 
+            proj_backer_instance.backer
+        end 
     end 
     
 end  
