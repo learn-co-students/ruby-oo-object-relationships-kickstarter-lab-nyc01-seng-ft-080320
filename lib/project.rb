@@ -5,4 +5,13 @@ class Project
         @title = title
     end 
 
+    def add_backer(backer)
+        ProjectBacker.new(self, backer)
+    end 
+
+    def backers
+        backers = ProjectBacker.all.filter { |proj_backer_instance|  proj_backer_instance.project == self }
+        backers.map { |proj_backer_instance| proj_backer_instance.backer}
+    end 
+    
 end 
