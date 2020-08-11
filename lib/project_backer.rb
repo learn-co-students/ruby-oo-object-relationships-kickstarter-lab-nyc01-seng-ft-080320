@@ -6,11 +6,11 @@ class ProjectBacker
     def initialize(project, backer)
         @project = project;
         @backer = backer;
-        save;
+        save
     end
     
     def save
-        @@all.push(self);
+        @@all << self
     end
 
     def self.all
